@@ -252,7 +252,7 @@ body {
   /* Navigation Button */
         .nav-box {
             display: block;
-            width:200px;
+            width:300px;
             margin: 10px auto;
             padding: 20px;
             text-align: center;
@@ -268,4 +268,5 @@ body {
         .nav-box:hover {
             background: #28a0e6;
         }
+
 
