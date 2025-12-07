@@ -2,6 +2,8 @@
 
 > A fast-paced typing-shooter game built with vanilla JavaScript and HTML5 Canvas. Destroy enemy ships by typing words correctly before they reach the bottom.
 
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/87c67cec-5505-43d0-a2a8-cf9d4fe43301" />
+
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -386,3 +388,4 @@ This project is open source and available under the [MIT License](LICENSE).
 **Made with ❤️ using HTML5, CSS3, and JavaScript**
 
 For questions or issues, please open an [issue](https://github.com/your-username/TypeBlaster/issues) on GitHub.
+
