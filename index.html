@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeBlaster - Typing Shooter Game</title>
+    <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- Start Screen -->
+        <div id="startScreen" class="screen">
+            <h1>TypeBlaster</h1>
+            <p class="subtitle">Your words are your weapons!</p>
+            <div class="instructions">
+                <p>Enemy ships are descending from space.</p>
+                <p>Type the words on each ship to destroy them.</p>
+                <p>Don't let them reach the bottom!</p>
+                <p></p>
+            </div>
+            <button id="startButton" class="gameButton">Start Game</button>
+            <div id="highScoreDisplay" class="highScore"></div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameOverScreen" class="screen hidden">
+            <h2>Game Over</h2>
+            <div id="finalScore" class="finalScore"></div>
+            <div id="newHighScore" class="newHighScore hidden"></div>
+            <button id="restartButton" class="gameButton">Play Again</button>
+                <!-- Clickable navigation box -->
+                 <br>
+                 <br>
+                 <br>
+                 <br>
+                 <br>
+                 <br>
+              
+                 
+    <a class="nav-box" href="AboutDev.html">About Developer</a>
+        </div>
+
+        <!-- Game UI Overlay -->
+        <div id="gameUI" class="gameUI hidden">
+            <div class="uiTop">
+                <div class="stat">
+                    <span class="label">Score:</span>
+                    <span id="scoreDisplay">0</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Wave:</span>
+                    <span id="waveDisplay">1</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Lives:</span>
+                    <span id="livesDisplay">3</span>
+                </div>
+            </div>
+            <div class="uiBottom">
+                <div id="activeWord" class="activeWord"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="words.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0a0a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #fff;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameContainer {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameCanvas {
+    display: block;
+    background: #000;
+    border: 2px solid #4a90e2;
+    box-shadow: 0 0 30px rgba(74, 144, 226, 0.5);
+    max-width: 100%;
+    max-height: 100vh;
+}
+
+.screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+    background: rgba(10, 10, 46, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid #4a90e2;
+    box-shadow: 0 0 50px rgba(74, 144, 226, 0.7);
+    min-width: 400px;
+}
+
+.screen.hidden {
+    display: none;
+}
+
+.screen h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px #4a90e2, 0 0 30px #4a90e2;
+    background: linear-gradient(45deg, #4a90e2, #7b68ee, #4a90e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.screen h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff6b6b;
+    text-shadow: 0 0 15px #ff6b6b;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #a0d2ff;
+}
+
+.instructions {
+    margin: 30px 0;
+    line-height: 1.8;
+    color: #ccc;
+}
+
+.instructions p {
+    margin: 10px 0;
+}
+
+.gameButton {
+    background: linear-gradient(135deg, #4a90e2, #7b68ee);
+    border: none;
+    color: white;
+    padding: 15px 40px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.4);
+    margin-top: 20px;
+}
+
+.gameButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.6);
+    background: linear-gradient(135deg, #5ba0f2, #8b78fe);
+}
+
+.gameButton:active {
+    transform: translateY(0);
+}
+
+.highScore {
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #ffd700;
+}
+
+.finalScore {
+    font-size: 2em;
+    margin: 20px 0;
+    color: #4a90e2;
+}
+
+.newHighScore {
+    font-size: 1.5em;
+    color: #ffd700;
+    margin: 15px 0;
+    text-shadow: 0 0 10px #ffd700;
+}
+
+.newHighScore.hidden {
+    display: none;
+}
+
+.gameUI {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.gameUI.hidden {
+    display: none;
+}
+
+.uiTop {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.stat {
+    background: rgba(10, 10, 46, 0.8);
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid #4a90e2;
+    font-size: 1.1em;
+}
+
+.stat .label {
+    color: #a0d2ff;
+    margin-right: 8px;
+}
+
+.uiBottom {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.activeWord {
+    background: rgba(10, 10, 46, 0.9);
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: 2px solid #4a90e2;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    min-width: 200px;
+    box-shadow: 0 0 20px rgba(74, 144, 226, 0.5);
+}
+
+.activeWord .typed {
+    color: #4a90e2;
+    text-shadow: 0 0 10px #4a90e2;
+}
+
+.activeWord .remaining {
+    color: #fff;
+}
+
+.activeWord .error {
+    color: #ff6b6b;
+    text-shadow: 0 0 10px #ff6b6b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .screen {
+        min-width: 90%;
+        padding: 30px 20px;
+    }
+
+    .screen h1 {
+        font-size: 2.5em;
+    }
+
+    .screen h2 {
+        font-size: 2em;
+    }
+
+    .uiTop {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .stat {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+
+    .activeWord {
+        font-size: 1.2em;
+        padding: 12px 20px;
+    }
+}
+
+@media (max-height: 600px) {
+    .screen {
+        padding: 20px;
+    }
+
+    .screen h1 {
+        font-size: 2em;
+    }
+
+    .instructions {
+        margin: 15px 0;
+        font-size: 0.9em;
+    }
+}
+
+
+  /* Navigation Button */
+        .nav-box {
+            display: block;
+            width:200px;
+            margin: 10px auto;
+            padding: 20px;
+            text-align: center;
+            background: #4db8ff;
+            color: #000;
+            font-size: 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-box:hover {
+            background: #28a0e6;
+        }
+
