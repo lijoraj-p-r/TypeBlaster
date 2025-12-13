@@ -105,6 +105,8 @@ xdg-open index.html # Linux
 
 ```
 TypeBlaster/
+├── assets
+│   └──bgTheme 
 ├── index.html          # Main HTML structure and game container
 ├── style.css           # Game styles, animations, and responsive design
 ├── main.js             # Core game logic, rendering, and state management
@@ -388,5 +390,6 @@ This project is open source and available under the [MIT License](LICENSE).
 **Made with ❤️ using HTML5, CSS3, and JavaScript**
 
 For questions or issues, please open an [issue](https://github.com/your-username/TypeBlaster/issues) on GitHub.
+
 
 
