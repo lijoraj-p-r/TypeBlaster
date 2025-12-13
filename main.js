@@ -88,16 +88,6 @@ function createStars() {
     }
 }
 
-const bgMusic = document.getElementById('bgMusic');
-
-function startAudio() {
-    bgMusic.volume = 0.4;
-    bgMusic.play();
-}
-
-document.addEventListener('keydown', startAudio, { once: true });
-
-
 function startGame() {
     // Reset game state
     CONFIG.gameState = 'playing';
@@ -122,6 +112,16 @@ function startGame() {
     // Update UI
     updateUI();
     
+const bgMusic = document.getElementById('bgMusic');
+
+function startAudio() {
+    bgMusic.volume = 0.4;
+    bgMusic.play();
+}
+
+document.addEventListener('keydown', startAudio, { once: true });
+
+
     // Focus canvas for keyboard input
     CONFIG.canvas.focus();
 }
