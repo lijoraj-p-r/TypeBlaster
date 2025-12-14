@@ -1,3 +1,5 @@
+<img width="1219" height="697" alt="typeblster" src="https://github.com/user-attachments/assets/8cba1a8e-2dfa-4a92-82b8-62f0024338d5" />
+
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/87c67cec-5505-43d0-a2a8-cf9d4fe43301" />
 
 # [TypeBlaster 🚀](https://lijoraj-p-r.github.io/TypeBlaster/ "Click to Play!")
@@ -394,6 +396,7 @@ This project is open source and available under the [MIT License](LICENSE).
 For questions or issues, please open an [issue](https://github.com/lijoraj-p-r/TypeBlaster/issues) on GitHub.
 
 <!-- 🏁 Congrats! You scrolled to the bottom. Time to commit your life choices. -->
+
 
 
 
