@@ -366,7 +366,7 @@ Contributions are welcome! Please follow these guidelines:
 
 ### Contribution Ideas
 
-- [ ] Add sound effects and background music
+- [ ] Add sound effects and background music -> Enabled with v2.0.0 🚀
 - [ ] Implement power-ups (slow time, clear screen, etc.)
 - [ ] Add different enemy types
 - [ ] Create mobile touch controls
@@ -390,6 +390,7 @@ This project is open source and available under the [MIT License](LICENSE).
 **Made with ❤️ using HTML5, CSS3, and JavaScript**
 
 For questions or issues, please open an [issue](https://github.com/your-username/TypeBlaster/issues) on GitHub.
+
 
 
 
