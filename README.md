@@ -353,7 +353,7 @@ vercel --prod
 ### Custom Server
 
 Upload all files to your web server. No build step required.
-
+                                                                                                                                                                            
 ## Contributing
 
 Contributions are welcome! Please follow these guidelines:
@@ -387,10 +387,11 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-**Made with ❤️ using HTML5, CSS3, and JavaScript**
+<!-- Made with ❤️ by lijoraj using HTML5, CSS3, and JavaScript -->
 
-For questions or issues, please open an [issue](https://github.com/your-username/TypeBlaster/issues) on GitHub.
+For questions or issues, please open an [issue](https://github.com/lijoraj-p-r/TypeBlaster/issues) on GitHub.
 
+<!-- 🏁 Congrats! You scrolled to the bottom. Time to commit your life choices. -->
 
 
 
