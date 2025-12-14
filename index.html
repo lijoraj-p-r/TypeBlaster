@@ -25,7 +25,7 @@
                 <p>Don't let them reach the bottom!</p>
                 <p></p>
             </div>
-            <button id="startButton" class="gameButton">Start Game</button>
+            <button id="startButton"   class="gameButton clickable">Start Game</button>
             <div id="highScoreDisplay" class="highScore"></div>
         </div>
 
@@ -34,7 +34,7 @@
             <h2>Game Over</h2>
             <div id="finalScore" class="finalScore"></div>
             <div id="newHighScore" class="newHighScore hidden"></div>
-            <button id="restartButton" class="gameButton">Play Again</button>
+            <button id="restartButton" class="gameButton clickable">Play Again</button>
                 <!-- Clickable navigation box -->
                  <br>
                  <br>
@@ -44,7 +44,7 @@
                  <br>
               
                  
-    <a class="nav-box" href="AboutDev.html">About Astro-Builder</a>
+    <a class="nav-box clickable" href="AboutDev.html">About Astro-Builder</a>
         </div>
 
         <!-- Game UI Overlay -->
@@ -71,6 +71,8 @@
     <audio id="bgMusic" loop>
     <source src="assets/bgTheme.mp3" type="audio/mpeg">
 </audio>
+
+ 
     <script src="words.js"></script>
     <script src="main.js"></script>
 </body>

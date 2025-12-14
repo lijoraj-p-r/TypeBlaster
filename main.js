@@ -120,11 +120,34 @@ function startAudio() {
 }
 
 document.addEventListener('keydown', startAudio, { once: true });
-
-
     // Focus canvas for keyboard input
     CONFIG.canvas.focus();
 }
+function explosionSoundStart() {
+  const sound = new Audio("./assets/explotionSound.wav");
+  sound.volume  = 0.05;
+  sound.play();
+}
+
+// Preload template audio
+const clickSoundTemplate = new Audio("./assets/ClickSound.wav");
+clickSoundTemplate.volume = 0.1;
+
+// Function to play once per click
+function clickSoundStart() {
+  // Create a new instance from the template
+  const sound = clickSoundTemplate.cloneNode();
+    sound.volume = 0.05; // reduce more if necessary
+
+  sound.play().catch(err => console.error(err));
+}
+
+// Attach to all elements with class "clickable"
+document.querySelectorAll(".clickable").forEach(el => {
+  el.addEventListener("click", clickSoundStart);
+});
+
+
 
 function gameOver() {
     CONFIG.gameState = 'gameover';
@@ -301,7 +324,8 @@ function destroyEnemy(enemy) {
         
         // Create explosion
         createExplosion(enemy.x + enemy.width / 2, enemy.y + enemy.height / 2);
-        
+        explosionSoundStart();
+
         // Update score
         CONFIG.score += enemy.word.length * 10 * CONFIG.wave;
         
