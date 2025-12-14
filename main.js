@@ -115,7 +115,7 @@ function startGame() {
 const bgMusic = document.getElementById('bgMusic');
 
 function startAudio() {
-    bgMusic.volume = 0.4;
+    bgMusic.volume = 0.6;
     bgMusic.play();
 }
 
@@ -125,7 +125,7 @@ document.addEventListener('keydown', startAudio, { once: true });
 }
 function explosionSoundStart() {
   const sound = new Audio("./assets/explotionSound.wav");
-  sound.volume  = 0.05;
+  sound.volume  = 0.3;
   sound.play();
 }
 
@@ -515,5 +515,6 @@ if (document.readyState === 'loading') {
 } else {
     init();
 }
+
 
 
