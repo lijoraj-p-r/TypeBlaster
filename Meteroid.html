@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Meteor Shower</title>
+<style>
+    body {
+        margin: 0;
+        overflow: hidden;
+        height: 100vh;
+        background: radial-gradient(circle at bottom, #020111, #000000);
+    }
+
+    .meteor {
+        position: absolute;
+        width: 3px;
+        height: 140px;
+        background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0));
+        transform-origin: top;
+        filter: blur(1.2px);
+        box-shadow: 0 0 12px rgba(255,255,255,0.6), 0 0 30px rgba(255,255,255,0.4);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .star {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        background: white;
+        border-radius: 50%;
+        opacity: 0.8;
+    }
+</style>
+</head>
+<body>
+
+<script>
+// ---------- Create stars ----------
+for (let i = 0; i < 120; i++) {
+    const star = document.createElement("div");
+    star.className = "star";
+    star.style.left = Math.random() * window.innerWidth + "px";
+    star.style.top = Math.random() * window.innerHeight + "px";
+    document.body.appendChild(star);
+}
+
+// ---------- Meteor class ----------
+class Meteor {
+    constructor() {
+        this.el = document.createElement("div");
+        this.el.className = "meteor";
+        document.body.appendChild(this.el);
+
+        // Start randomly along the top edge (top-left to top-right)
+        this.x = Math.random() * window.innerWidth;
+        this.y = -100;
+
+        // Velocity (diagonal downward, slightly randomized for natural effect)
+        this.vx = -1.5 + Math.random() * 3; // can go left or right
+        this.vy = 2 + Math.random() * 3;    // downward
+
+        // Gravity smooth ramp
+        this.gravity = 0.01;
+        this.maxGravity = 0.08;
+        this.drag = 0.995;
+
+        // Fade-in
+        this.opacity = 0;
+
+        this.update();
+    }
+
+    update() {
+        // Gradually increase gravity
+        if (this.gravity < this.maxGravity) {
+            this.gravity += 0.0005;
+        }
+
+        // Apply physics
+        this.vy += this.gravity;
+        this.vx *= this.drag;
+        this.vy *= this.drag;
+
+        // Update position
+        this.x += this.vx;
+        this.y += this.vy;
+
+        // Rotation angle along trajectory
+        const angle = Math.atan2(this.vy, this.vx) * 180 / Math.PI + 90;
+
+        // Smooth fade-in
+        if (this.opacity < 1) this.opacity += 0.02;
+        this.el.style.opacity = this.opacity;
+
+        // Apply transform
+        this.el.style.transform = `translate(${this.x}px, ${this.y}px) rotate(${angle}deg)`;
+
+        // Remove if off-screen
+        if (this.y < window.innerHeight + 200 && this.x > -200 && this.x < window.innerWidth + 200) {
+            requestAnimationFrame(this.update.bind(this));
+        } else {
+            this.el.remove();
+        }
+    }
+}
+
+// ---------- Spawn meteors ----------
+setInterval(() => {
+    new Meteor();
+}, 600);
+</script>
+
+</body>
+</html>

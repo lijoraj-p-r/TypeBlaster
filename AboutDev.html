@@ -9,131 +9,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
     <link rel="manifest" href="favicon_io/site.webmanifest">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #0a0a2e 0%, #16213e 50%, #0f3460 100%);
-            color: #fff;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 40px 20px;
-        }
-
-        /* ---- Container ---- */
-        .container {
-            max-width: 700px;
-            width: 100%;
-            background: rgba(10, 10, 46, 0.95);
-            padding: 40px;
-            border-radius: 15px;
-            border: 2px solid #4a90e2;
-            box-shadow: 0 0 50px rgba(74, 144, 226, 0.7);
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 3em;
-            margin-bottom: 25px;
-            text-shadow: 0 0 20px #4a90e2, 0 0 30px #4a90e2;
-            background: linear-gradient(45deg, #4a90e2, #7b68ee, #4a90e2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .info {
-            font-size: 1.2em;
-            margin: 15px 0;
-            color: #ccc;
-            line-height: 1.8;
-        }
-
-        .info strong {
-            color: #a0d2ff;
-        }
-
-        /* ---- Links ---- */
-        a {
-            color: #4a90e2;
-            text-decoration: none;
-            margin: 10px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        a:hover {
-            color: #7b68ee;
-            text-shadow: 0 0 10px #4a90e2;
-        }
-
-        /* ---- Social Links ---- */
-        .social {
-            margin: 10px 0 15px;
-        }
-
-        .social strong {
-            display: block;
-            margin-bottom: 15px;
-            color: #a0d2ff;
-            font-size: 1.1em;
-        }
-
-        .social a {
-            display: inline-block;
-            padding: 12px 25px;
-            border-radius: 8px;
-            border: 2px solid #4a90e2;
-            background: linear-gradient(135deg, #4a90e2, #7b68ee);
-            color: white;
-            margin: 8px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(74, 144, 226, 0.4);
-        }
-
-        .social a:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(74, 144, 226, 0.6);
-            background: linear-gradient(135deg, #5ba0f2, #8b78fe);
-        }
-
-        /* ---- Footer ---- */
-        .footer {
-            margin-top: 30px;
-            font-size: 0.9rem;
-            color: #a0d2ff;
-            opacity: 0.8;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .container {
-                padding: 30px 20px;
-            }
-
-            h1 {
-                font-size: 2.5em;
-            }
-
-            .info {
-                font-size: 1em;
-            }
-
-            .social a {
-                display: block;
-                margin: 10px auto;
-                max-width: 200px;
-            }
-        }
-    </style>
+    <link rel="styleSheet" href="/AboutDev.css">
 </head>
 
 <body>
@@ -142,21 +18,16 @@
 
         <p class="info"><strong>Developer Name:</strong>Lijoraj</p>
         <p class="info"><strong>Email:</strong> lijorajpr321@gmail.com</p>
-        <p class="info">
-            <strong>Website:</strong>
-            <a href="https://lijoraj-p-r.github.io/myportfolio/" target="_blank">
-                lijoraj-p-r.github.io/myportfolio/
-            </a>
-        </p>
 
         <div class="social">
-            <strong>Social Links:</strong><br><br>
+            <strong>Social Links:</strong>
+                        <a href="https://lijoraj-p-r.github.io/myportfolio/" target="_blank" class="clickable">Website</a>
             <a href="https://www.linkedin.com/in/lijoraj-p-r" target="_blank" class="clickable">LinkedIn</a>
             <a href="https://github.com/lijoraj-p-r" target="_blank" class="clickable">GitHub</a>
         </div>
         <!-- 🎵 Music Info shown to user -->
 <p class="info">
-    <strong>Background Music:</strong><br>
+    <strong>Background Music: </strong>
     Interstellar-inspired ambient (royalty-free)
 </p>
 
@@ -164,6 +35,18 @@
             © 2025 infinity Works. All rights reserved.
         </div>
     </div>
+    
+<script>
+// ---------- Create stars ----------
+for (let i = 0; i < 120; i++) {
+    const star = document.createElement("div");
+    star.className = "star";
+    star.style.left = Math.random() * window.innerWidth + "px";
+    star.style.top = Math.random() * window.innerHeight + "px";
+    document.body.appendChild(star);
+}
+</script>
+
 </body>
 </html>
 
